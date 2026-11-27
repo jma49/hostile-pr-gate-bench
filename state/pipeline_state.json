@@ -1,0 +1,31 @@
+{
+  "topic_slug": "hostile-pr-gate-bench",
+  "title": "Reviewing Code You Do Not Trust: Threat Modeling, Fail-Closed Contracts, and Evasion Resilience for Autonomous Pull-Request Gates",
+  "target_venue": "ICSE / ASE / ISSTA / IEEE SecDev (IEEEtran)",
+  "created_utc": "2026-11-27T01:48:53.049185+00:00",
+  "current_stage": "STAGE_1_PLAN_AND_SCOUT",
+  "gates": {
+    "G1_PLAN_FREEZE": {
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null
+    },
+    "G2_RESULTS_AUDIT": {
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null
+    },
+    "G3_REVIEW_DECISION": {
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null
+    },
+    "G4_SUBMISSION_COMPLIANCE": {
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null
+    }
+  },
+  "revision_rounds": 0,
+  "max_revision_rounds": 3
+}
