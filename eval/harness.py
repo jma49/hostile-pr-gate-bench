@@ -22,7 +22,9 @@ from typing import Any, Dict, List
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from hpg import ALL_GATES, SimConfig, generate_benchmark, run_benchmark
+from hpg import ALL_GATES, SimConfig, evaluate_gate, generate_benchmark
+
+GATE_MAP = {cls.name: cls for cls in ALL_GATES}
 
 MAIN_GATES = [
     "NaiveDiffGate",
@@ -115,7 +117,7 @@ def main() -> None:
     aa_rows: List[Dict[str, Any]] = []
     for block, seeds in (("A", SEEDS_20), ("B", SEEDS_AA_B)):
         for s in seeds:
-            m = run_benchmark(cases, gate="ZeroTrustEnvelopeGate", config=base_cfg, seed=s).to_dict()
+            m = evaluate_gate(GATE_MAP["ZeroTrustEnvelopeGate"], cases, config=base_cfg, seed=s).to_dict()
             m["block"] = block
             aa_rows.append(m)
     seal_run("exp0_aa_noise_v1", "exp0_aa_noise", SEEDS_20 + SEEDS_AA_B, aa_rows, {"cases": len(cases)})
@@ -124,14 +126,14 @@ def main() -> None:
     main_rows: List[Dict[str, Any]] = []
     for g in MAIN_GATES:
         for s in SEEDS_25:
-            main_rows.append(run_benchmark(cases, gate=g, config=base_cfg, seed=s).to_dict())
+            main_rows.append(evaluate_gate(GATE_MAP[g], cases, config=base_cfg, seed=s).to_dict())
     seal_run("exp1_main_bench_v1", "exp1_main_bench", SEEDS_25, main_rows, {"gates": MAIN_GATES, "cases": len(cases)})
 
     # EXP-2: Component Ablation
     abl_rows: List[Dict[str, Any]] = []
     for g in ABLATION_GATES:
         for s in SEEDS_25:
-            abl_rows.append(run_benchmark(cases, gate=g, config=base_cfg, seed=s).to_dict())
+            abl_rows.append(evaluate_gate(GATE_MAP[g], cases, config=base_cfg, seed=s).to_dict())
     seal_run("exp2_ablation_v1", "exp2_ablation", SEEDS_25, abl_rows, {"gates": ABLATION_GATES})
 
     # EXP-3: File Budget Sweep (5..50)
@@ -140,7 +142,7 @@ def main() -> None:
         cfg = SimConfig(file_budget=b, injection_susceptibility=0.65)
         for g in ("NaiveDiffGate", "BudgetCappedSilentGate", "ZT-NoFailClosed", "ZeroTrustEnvelopeGate"):
             for s in SEEDS_20:
-                m = run_benchmark(cases, gate=g, config=cfg, seed=s).to_dict()
+                m = evaluate_gate(GATE_MAP[g], cases, config=cfg, seed=s).to_dict()
                 m["file_budget"] = b
                 bud_rows.append(m)
     seal_run("exp3_budget_sweep_v1", "exp3_budget_sweep", SEEDS_20, bud_rows, {"budgets": [5, 10, 15, 30, 50]})
@@ -151,7 +153,7 @@ def main() -> None:
         cfg = SimConfig(file_budget=15, injection_susceptibility=susc)
         for g in ("NaiveDiffGate", "PromptSanitizedGate", "ZT-NoSARIF", "ZeroTrustEnvelopeGate"):
             for s in SEEDS_20:
-                m = run_benchmark(cases, gate=g, config=cfg, seed=s).to_dict()
+                m = evaluate_gate(GATE_MAP[g], cases, config=cfg, seed=s).to_dict()
                 m["injection_susceptibility"] = susc
                 inj_rows.append(m)
     seal_run("exp4_injection_sweep_v1", "exp4_injection_sweep", SEEDS_20, inj_rows, {"susceptibilities": [0.25, 0.50, 0.65, 0.85]})
