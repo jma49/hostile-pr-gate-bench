@@ -1,0 +1,8 @@
+\section{Related Work}
+\label{sec:related}
+
+\textbf{AI Code Review, Supply Chain, and CI/CD Security.}
+Empirical evaluations demonstrate growing adoption of LLM code review~\cite{schfer2023empirical,sghaier2025harnessing}, while security taxonomies expose open-source supply chain and CI/CD workflow attack surfaces~\cite{ladisa2023taxonomy,pan2023ambush,rebatchi2024dependabot}. Cost-bounded verification and FinOps studies highlight the necessity of explicit resource budgets in cloud pipelines~\cite{cho2026finops,elfakdi2021evaluating}. Our threat model unifies these domains by demonstrating how budget caps interact adversarially with untrusted PR diffs.
+
+\textbf{Prompt Injection, Zero-Trust Agents, and Neuro-Symbolic Anchoring.}
+Indirect prompt injection benchmarks such as InjecAgent~\cite{zhan2024injecagent}, adaptive attacks~\cite{zhan2025adaptive}, and defense frameworks~\cite{alnemari2026genshield,hossain2025multi,wu2024detectrl} establish that prompt-level filtering alone cannot resist adaptive adversaries; zero-trust agent sandboxing surveys advocate deterministic capability isolation~\cite{deng2025agents}. Hybrid static-analysis + LLM approaches~\cite{gnieciak2025large,qin2025advancing} and refactoring-aware code tracking~\cite{tuna2022tracking,hasan2024refactoring} motivate our SARIF evidence fusion and quote-anchored lifecycle contracts.

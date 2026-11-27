@@ -1,0 +1,45 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\input{generated/numbers.tex}
+
+\begin{document}
+
+\title{Reviewing Code You Do Not Trust: Threat Modeling, Fail-Closed Contracts, and Evasion Resilience for Autonomous Pull-Request Gates}
+
+\author{\IEEEauthorblockN{Jincheng Ma}
+\IEEEauthorblockA{\textit{Independent Researcher}\\
+San Francisco Bay Area, CA, USA}
+}
+
+\maketitle
+
+\begin{abstract}
+Autonomous LLM-based code review agents are increasingly deployed as blocking Continuous Integration (CI) quality gates across open-source and enterprise repositories. Yet existing gates implicitly trust the pull request (PR) under review, creating an adversarial attack surface spanning external fork contributors, compromised dependencies, and runaway coding agents.
+
+We formalize the first system-level threat model for autonomous PR quality gates, identifying four structural bypass classes: (1) \emph{in-band configuration tampering} (modifying \texttt{AGENTS.md} or rule files inside the PR head), (2) \emph{indirect diff-comment prompt injection} and output exfiltration smuggling, (3) \emph{budget-exhaustion starvation} (padding PRs with decoy files so cost-capped gates silently approve unreviewed files), and (4) \emph{cross-push line-shift state spoofing}. We introduce \textbf{HostilePR-Bench}, an executable 180-case benchmark of concrete unified diffs, SARIF~2.1.0 alerts, and multi-push histories, and evaluate \textbf{ZeroTrustEnvelopeGate}, a deterministic security envelope combining base-commit configuration locking, untrusted input fencing, SARIF evidence fusion, fail-closed explicit coverage (\texttt{Exit 3}), and quote-anchored code-entity lifecycle tracking. Across \TotalSealedRuns{} SHA-256-sealed suites (\TotalPREvals{} PR gate evaluations), \textbf{ZeroTrustEnvelopeGate} slashes adversarial evasion rate (ASR) from \NaiveASRPct{}\% (\texttt{NaiveDiffGate}) and \BudgetSilentASRPct{}\% (\texttt{BudgetCappedSilentGate}) down to \ZTASRPct{}\% (Holm-adjusted Wilcoxon $p\HolmPASRVsNaive{}$), eliminates silent budget-starvation bypass (\ZTSilentPct{}\% vs.\ \BudgetSilentBypassPct{}\%) and output leaks (\ZTLeakPct{}\% vs.\ \NaiveLeakPct{}\%), and lifts cross-push unfixed-vulnerability tracking F1 from \LineAnchorTrackFOne{} to \ZTTrackFOne{} ($p\HolmPTrackVsLine{}$).
+\end{abstract}
+
+\begin{IEEEkeywords}
+Software Supply Chain Security, Autonomous Code Review, Prompt Injection, Threat Modeling, Fail-Closed Gates, SARIF
+\end{IEEEkeywords}
+
+\input{sections/01_introduction.tex}
+\input{sections/02_threat_model_and_architecture.tex}
+\input{sections/03_evaluation.tex}
+\input{sections/04_related_work.tex}
+\input{sections/05_discussion_conclusion.tex}
+\input{sections/ai_disclosure.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

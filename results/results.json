@@ -1,0 +1,2354 @@
+{
+  "audit_passed": true,
+  "verified_runs": 5,
+  "total_records": 1010,
+  "total_pr_evals": 181800,
+  "aa_noise": {
+    "asr_pp": 0.17,
+    "recall_pp": 0.14
+  },
+  "main_benchmark": {
+    "NaiveDiffGate": {
+      "vuln_recall": {
+        "mean": 0.3688,
+        "ci_lo": 0.3608,
+        "ci_hi": 0.3771,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.737,
+        "ci_lo": 0.727,
+        "ci_hi": 0.746,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.333,
+        "ci_lo": 0.329,
+        "ci_hi": 0.3367,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.1351,
+        "ci_lo": 0.134,
+        "ci_hi": 0.1367,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.0005,
+        "ci_lo": 0.0005,
+        "ci_hi": 0.0005,
+        "n": 25
+      }
+    },
+    "PromptSanitizedGate": {
+      "vuln_recall": {
+        "mean": 0.4144,
+        "ci_lo": 0.4061,
+        "ci_hi": 0.4227,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.68,
+        "ci_lo": 0.6703,
+        "ci_hi": 0.6897,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.333,
+        "ci_lo": 0.329,
+        "ci_hi": 0.3367,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.1351,
+        "ci_lo": 0.134,
+        "ci_hi": 0.1367,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.0005,
+        "ci_lo": 0.0005,
+        "ci_hi": 0.0005,
+        "n": 25
+      }
+    },
+    "BudgetCappedSilentGate": {
+      "vuln_recall": {
+        "mean": 0.5107,
+        "ci_lo": 0.5027,
+        "ci_hi": 0.5192,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.5633,
+        "ci_lo": 0.5523,
+        "ci_hi": 0.5733,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.381,
+        "ci_lo": 0.377,
+        "ci_hi": 0.3847,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.1351,
+        "ci_lo": 0.134,
+        "ci_hi": 0.1367,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.0006,
+        "ci_lo": 0.0006,
+        "ci_hi": 0.0006,
+        "n": 25
+      }
+    },
+    "LineAnchoredIncrementalGate": {
+      "vuln_recall": {
+        "mean": 0.5984,
+        "ci_lo": 0.5904,
+        "ci_hi": 0.6067,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.0727,
+        "ci_lo": 0.064,
+        "ci_hi": 0.0817,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.1351,
+        "ci_lo": 0.134,
+        "ci_hi": 0.1367,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.2667,
+        "ci_lo": 0.2667,
+        "ci_hi": 0.2667,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.001,
+        "ci_lo": 0.001,
+        "ci_hi": 0.001,
+        "n": 25
+      }
+    },
+    "ZeroTrustEnvelopeGate": {
+      "vuln_recall": {
+        "mean": 0.6579,
+        "ci_lo": 0.6541,
+        "ci_hi": 0.6619,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.0203,
+        "ci_lo": 0.016,
+        "ci_hi": 0.0247,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.2667,
+        "ci_lo": 0.2667,
+        "ci_hi": 0.2667,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.001,
+        "ci_lo": 0.001,
+        "ci_hi": 0.001,
+        "n": 25
+      }
+    }
+  },
+  "holm_pvalues": {
+    "NaiveDiffGate:cross_push_tracking_f1": 9.93e-06,
+    "PromptSanitizedGate:cross_push_tracking_f1": 9.93e-06,
+    "BudgetCappedSilentGate:cross_push_tracking_f1": 9.93e-06,
+    "LineAnchoredIncrementalGate:cross_push_tracking_f1": 9.93e-06,
+    "BudgetCappedSilentGate:silent_bypass_rate": 0.00013363,
+    "NaiveDiffGate:silent_bypass_rate": 0.00013363,
+    "PromptSanitizedGate:silent_bypass_rate": 0.00013363,
+    "LineAnchoredIncrementalGate:adversarial_evasion_rate": 0.00013363,
+    "NaiveDiffGate:vuln_recall": 0.00013363,
+    "BudgetCappedSilentGate:adversarial_evasion_rate": 0.00013363,
+    "PromptSanitizedGate:adversarial_evasion_rate": 0.00013363,
+    "BudgetCappedSilentGate:vuln_recall": 0.00013363,
+    "LineAnchoredIncrementalGate:vuln_recall": 0.00013363,
+    "NaiveDiffGate:adversarial_evasion_rate": 0.00013363,
+    "PromptSanitizedGate:vuln_recall": 0.00013363,
+    "LineAnchoredIncrementalGate:silent_bypass_rate": 1.0
+  },
+  "ablation": {
+    "ZeroTrustEnvelopeGate": {
+      "vuln_recall": {
+        "mean": 0.6579,
+        "ci_lo": 0.6541,
+        "ci_hi": 0.6619,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.0203,
+        "ci_lo": 0.016,
+        "ci_hi": 0.0247,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.2667,
+        "ci_lo": 0.2667,
+        "ci_hi": 0.2667,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.001,
+        "ci_lo": 0.001,
+        "ci_hi": 0.001,
+        "n": 25
+      }
+    },
+    "ZT-NoBaseLock": {
+      "vuln_recall": {
+        "mean": 0.5019,
+        "ci_lo": 0.4984,
+        "ci_hi": 0.5053,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.2597,
+        "ci_lo": 0.2557,
+        "ci_hi": 0.2637,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.2333,
+        "ci_lo": 0.2333,
+        "ci_hi": 0.2333,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.0009,
+        "ci_lo": 0.0009,
+        "ci_hi": 0.0009,
+        "n": 25
+      }
+    },
+    "ZT-NoFailClosed": {
+      "vuln_recall": {
+        "mean": 0.6579,
+        "ci_lo": 0.6541,
+        "ci_hi": 0.6619,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.4013,
+        "ci_lo": 0.396,
+        "ci_hi": 0.4063,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.381,
+        "ci_lo": 0.377,
+        "ci_hi": 0.3847,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.0007,
+        "ci_lo": 0.0007,
+        "ci_hi": 0.0007,
+        "n": 25
+      }
+    },
+    "ZT-NoQuoteAnchor": {
+      "vuln_recall": {
+        "mean": 0.6579,
+        "ci_lo": 0.6541,
+        "ci_hi": 0.6619,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.0203,
+        "ci_lo": 0.016,
+        "ci_hi": 0.0247,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.2667,
+        "ci_lo": 0.2667,
+        "ci_hi": 0.2667,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.001,
+        "ci_lo": 0.001,
+        "ci_hi": 0.001,
+        "n": 25
+      }
+    },
+    "ZT-NoSARIF": {
+      "vuln_recall": {
+        "mean": 0.5984,
+        "ci_lo": 0.5904,
+        "ci_hi": 0.6067,
+        "n": 25
+      },
+      "adversarial_evasion_rate": {
+        "mean": 0.0727,
+        "ci_lo": 0.064,
+        "ci_hi": 0.0817,
+        "n": 25
+      },
+      "silent_bypass_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "cross_push_tracking_f1": {
+        "mean": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0,
+        "n": 25
+      },
+      "benign_fp_rate": {
+        "mean": 0.0533,
+        "ci_lo": 0.0387,
+        "ci_hi": 0.072,
+        "n": 25
+      },
+      "output_leak_rate": {
+        "mean": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n": 25
+      },
+      "exit3_incomplete_rate": {
+        "mean": 0.2667,
+        "ci_lo": 0.2667,
+        "ci_hi": 0.2667,
+        "n": 25
+      },
+      "mean_cost_usd": {
+        "mean": 0.001,
+        "ci_lo": 0.001,
+        "ci_hi": 0.001,
+        "n": 25
+      }
+    }
+  },
+  "budget_sweep": {
+    "5": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.3683,
+          "ci_lo": 0.3597,
+          "ci_hi": 0.3767,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.7367,
+          "ci_lo": 0.7254,
+          "ci_hi": 0.7471,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0003,
+          "ci_lo": 0.0003,
+          "ci_hi": 0.0003,
+          "n": 20
+        }
+      },
+      "BudgetCappedSilentGate": {
+        "vuln_recall": {
+          "mean": 0.509,
+          "ci_lo": 0.5,
+          "ci_hi": 0.518,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.5658,
+          "ci_lo": 0.5538,
+          "ci_hi": 0.5767,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3817,
+          "ci_lo": 0.3771,
+          "ci_hi": 0.3858,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0003,
+          "ci_lo": 0.0003,
+          "ci_hi": 0.0003,
+          "n": 20
+        }
+      },
+      "ZT-NoFailClosed": {
+        "vuln_recall": {
+          "mean": 0.6577,
+          "ci_lo": 0.6537,
+          "ci_hi": 0.662,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.4021,
+          "ci_lo": 0.3958,
+          "ci_hi": 0.4079,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3817,
+          "ci_lo": 0.3771,
+          "ci_hi": 0.3858,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0004,
+          "ci_lo": 0.0004,
+          "ci_hi": 0.0004,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.6577,
+          "ci_lo": 0.6537,
+          "ci_hi": 0.662,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0204,
+          "ci_lo": 0.0163,
+          "ci_hi": 0.025,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0009,
+          "ci_lo": 0.0009,
+          "ci_hi": 0.0009,
+          "n": 20
+        }
+      }
+    },
+    "10": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.3683,
+          "ci_lo": 0.3597,
+          "ci_hi": 0.3767,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.7367,
+          "ci_lo": 0.7254,
+          "ci_hi": 0.7471,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0004,
+          "ci_lo": 0.0004,
+          "ci_hi": 0.0004,
+          "n": 20
+        }
+      },
+      "BudgetCappedSilentGate": {
+        "vuln_recall": {
+          "mean": 0.509,
+          "ci_lo": 0.5,
+          "ci_hi": 0.518,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.5658,
+          "ci_lo": 0.5538,
+          "ci_hi": 0.5767,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3817,
+          "ci_lo": 0.3771,
+          "ci_hi": 0.3858,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0004,
+          "ci_lo": 0.0004,
+          "ci_hi": 0.0004,
+          "n": 20
+        }
+      },
+      "ZT-NoFailClosed": {
+        "vuln_recall": {
+          "mean": 0.6577,
+          "ci_lo": 0.6537,
+          "ci_hi": 0.662,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.4021,
+          "ci_lo": 0.3958,
+          "ci_hi": 0.4079,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3817,
+          "ci_lo": 0.3771,
+          "ci_hi": 0.3858,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.6577,
+          "ci_lo": 0.6537,
+          "ci_hi": 0.662,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0204,
+          "ci_lo": 0.0163,
+          "ci_hi": 0.025,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0009,
+          "ci_lo": 0.0009,
+          "ci_hi": 0.0009,
+          "n": 20
+        }
+      }
+    },
+    "15": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.3683,
+          "ci_lo": 0.3597,
+          "ci_hi": 0.3767,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.7367,
+          "ci_lo": 0.7254,
+          "ci_hi": 0.7471,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "BudgetCappedSilentGate": {
+        "vuln_recall": {
+          "mean": 0.509,
+          "ci_lo": 0.5,
+          "ci_hi": 0.518,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.5658,
+          "ci_lo": 0.5538,
+          "ci_hi": 0.5767,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3817,
+          "ci_lo": 0.3771,
+          "ci_hi": 0.3858,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0006,
+          "ci_lo": 0.0006,
+          "ci_hi": 0.0006,
+          "n": 20
+        }
+      },
+      "ZT-NoFailClosed": {
+        "vuln_recall": {
+          "mean": 0.6577,
+          "ci_lo": 0.6537,
+          "ci_hi": 0.662,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.4021,
+          "ci_lo": 0.3958,
+          "ci_hi": 0.4079,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3817,
+          "ci_lo": 0.3771,
+          "ci_hi": 0.3858,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0007,
+          "ci_lo": 0.0007,
+          "ci_hi": 0.0007,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.6577,
+          "ci_lo": 0.6537,
+          "ci_hi": 0.662,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0204,
+          "ci_lo": 0.0163,
+          "ci_hi": 0.025,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      }
+    },
+    "30": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.3917,
+          "ci_lo": 0.3827,
+          "ci_hi": 0.4003,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.71,
+          "ci_lo": 0.6975,
+          "ci_hi": 0.7213,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.2812,
+          "ci_lo": 0.2771,
+          "ci_hi": 0.2854,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0008,
+          "ci_lo": 0.0008,
+          "ci_hi": 0.0008,
+          "n": 20
+        }
+      },
+      "BudgetCappedSilentGate": {
+        "vuln_recall": {
+          "mean": 0.544,
+          "ci_lo": 0.535,
+          "ci_hi": 0.553,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.5267,
+          "ci_lo": 0.515,
+          "ci_hi": 0.5375,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3192,
+          "ci_lo": 0.315,
+          "ci_hi": 0.3233,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      },
+      "ZT-NoFailClosed": {
+        "vuln_recall": {
+          "mean": 0.7153,
+          "ci_lo": 0.7117,
+          "ci_hi": 0.7193,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.3346,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3404,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3121,
+          "ci_lo": 0.3079,
+          "ci_hi": 0.3167,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0011,
+          "ci_lo": 0.0011,
+          "ci_hi": 0.0011,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.7153,
+          "ci_lo": 0.7117,
+          "ci_hi": 0.7193,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0225,
+          "ci_lo": 0.0183,
+          "ci_hi": 0.0271,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2333,
+          "ci_lo": 0.2333,
+          "ci_hi": 0.2333,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0013,
+          "ci_lo": 0.0013,
+          "ci_hi": 0.0013,
+          "n": 20
+        }
+      }
+    },
+    "50": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.499,
+          "ci_lo": 0.4887,
+          "ci_hi": 0.5093,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.5821,
+          "ci_lo": 0.5696,
+          "ci_hi": 0.5946,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0258,
+          "ci_lo": 0.025,
+          "ci_hi": 0.0271,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      },
+      "BudgetCappedSilentGate": {
+        "vuln_recall": {
+          "mean": 0.6827,
+          "ci_lo": 0.671,
+          "ci_hi": 0.694,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.3671,
+          "ci_lo": 0.3538,
+          "ci_hi": 0.3792,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.0513,
+          "ci_hi": 0.0554,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0012,
+          "ci_lo": 0.0012,
+          "ci_hi": 0.0012,
+          "n": 20
+        }
+      },
+      "ZT-NoFailClosed": {
+        "vuln_recall": {
+          "mean": 0.9333,
+          "ci_lo": 0.9277,
+          "ci_hi": 0.939,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0758,
+          "ci_lo": 0.0696,
+          "ci_hi": 0.0821,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0417,
+          "ci_lo": 0.0417,
+          "ci_hi": 0.0417,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0015,
+          "ci_lo": 0.0015,
+          "ci_hi": 0.0015,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.9333,
+          "ci_lo": 0.9277,
+          "ci_hi": 0.939,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0342,
+          "ci_lo": 0.0279,
+          "ci_hi": 0.0404,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.05,
+          "ci_lo": 0.05,
+          "ci_hi": 0.05,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0015,
+          "ci_lo": 0.0015,
+          "ci_hi": 0.0015,
+          "n": 20
+        }
+      }
+    }
+  },
+  "injection_sweep": {
+    "0.25": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.4237,
+          "ci_lo": 0.4153,
+          "ci_hi": 0.4323,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.6675,
+          "ci_lo": 0.6583,
+          "ci_hi": 0.6767,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "PromptSanitizedGate": {
+        "vuln_recall": {
+          "mean": 0.4397,
+          "ci_lo": 0.431,
+          "ci_hi": 0.4483,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.6475,
+          "ci_lo": 0.6375,
+          "ci_hi": 0.6579,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "ZT-NoSARIF": {
+        "vuln_recall": {
+          "mean": 0.598,
+          "ci_lo": 0.589,
+          "ci_hi": 0.608,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0729,
+          "ci_lo": 0.0638,
+          "ci_hi": 0.0812,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.6583,
+          "ci_lo": 0.654,
+          "ci_hi": 0.663,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0196,
+          "ci_lo": 0.0154,
+          "ci_hi": 0.0242,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      }
+    },
+    "0.5": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.3883,
+          "ci_lo": 0.3797,
+          "ci_hi": 0.396,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.7117,
+          "ci_lo": 0.7017,
+          "ci_hi": 0.7217,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "PromptSanitizedGate": {
+        "vuln_recall": {
+          "mean": 0.421,
+          "ci_lo": 0.4137,
+          "ci_hi": 0.428,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.6708,
+          "ci_lo": 0.6608,
+          "ci_hi": 0.6808,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "ZT-NoSARIF": {
+        "vuln_recall": {
+          "mean": 0.597,
+          "ci_lo": 0.588,
+          "ci_hi": 0.6063,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0742,
+          "ci_lo": 0.0654,
+          "ci_hi": 0.0817,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.658,
+          "ci_lo": 0.654,
+          "ci_hi": 0.6623,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.02,
+          "ci_lo": 0.0158,
+          "ci_hi": 0.0242,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      }
+    },
+    "0.65": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.3683,
+          "ci_lo": 0.3597,
+          "ci_hi": 0.3767,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.7367,
+          "ci_lo": 0.7254,
+          "ci_hi": 0.7471,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "PromptSanitizedGate": {
+        "vuln_recall": {
+          "mean": 0.4123,
+          "ci_lo": 0.4037,
+          "ci_hi": 0.4207,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.6817,
+          "ci_lo": 0.6704,
+          "ci_hi": 0.6921,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "ZT-NoSARIF": {
+        "vuln_recall": {
+          "mean": 0.5953,
+          "ci_lo": 0.5863,
+          "ci_hi": 0.6047,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0762,
+          "ci_lo": 0.0671,
+          "ci_hi": 0.0846,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.6577,
+          "ci_lo": 0.6537,
+          "ci_hi": 0.662,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0204,
+          "ci_lo": 0.0163,
+          "ci_hi": 0.025,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      }
+    },
+    "0.85": {
+      "NaiveDiffGate": {
+        "vuln_recall": {
+          "mean": 0.3363,
+          "ci_lo": 0.3277,
+          "ci_hi": 0.3457,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.7767,
+          "ci_lo": 0.7671,
+          "ci_hi": 0.7863,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "PromptSanitizedGate": {
+        "vuln_recall": {
+          "mean": 0.3957,
+          "ci_lo": 0.3867,
+          "ci_hi": 0.405,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.7025,
+          "ci_lo": 0.6925,
+          "ci_hi": 0.7121,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.3333,
+          "ci_lo": 0.3287,
+          "ci_hi": 0.3375,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.1356,
+          "ci_lo": 0.1342,
+          "ci_hi": 0.1372,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.0005,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.0005,
+          "n": 20
+        }
+      },
+      "ZT-NoSARIF": {
+        "vuln_recall": {
+          "mean": 0.595,
+          "ci_lo": 0.5863,
+          "ci_hi": 0.6043,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0767,
+          "ci_lo": 0.0675,
+          "ci_hi": 0.085,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      },
+      "ZeroTrustEnvelopeGate": {
+        "vuln_recall": {
+          "mean": 0.6577,
+          "ci_lo": 0.6537,
+          "ci_hi": 0.662,
+          "n": 20
+        },
+        "adversarial_evasion_rate": {
+          "mean": 0.0204,
+          "ci_lo": 0.0163,
+          "ci_hi": 0.025,
+          "n": 20
+        },
+        "silent_bypass_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "cross_push_tracking_f1": {
+          "mean": 1.0,
+          "ci_lo": 1.0,
+          "ci_hi": 1.0,
+          "n": 20
+        },
+        "benign_fp_rate": {
+          "mean": 0.0533,
+          "ci_lo": 0.035,
+          "ci_hi": 0.075,
+          "n": 20
+        },
+        "output_leak_rate": {
+          "mean": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 20
+        },
+        "exit3_incomplete_rate": {
+          "mean": 0.2667,
+          "ci_lo": 0.2667,
+          "ci_hi": 0.2667,
+          "n": 20
+        },
+        "mean_cost_usd": {
+          "mean": 0.001,
+          "ci_lo": 0.001,
+          "ci_hi": 0.001,
+          "n": 20
+        }
+      }
+    }
+  }
+}

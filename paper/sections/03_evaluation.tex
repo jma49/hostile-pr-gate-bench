@@ -1,0 +1,24 @@
+\section{Evaluation and Empirical Results}
+\label{sec:eval}
+
+\subsection{HostilePR-Bench Corpus and Protocol}
+\textbf{HostilePR-Bench} comprises 180 concrete multi-file PR cases: 30 benign clean PRs, 30 vanilla vulnerable PRs (5 CWE classes), and 120 hostile PRs evenly distributed across in-band config tampering (24), indirect diff prompt injection (24), budget-exhaustion decoy flooding (24), cross-push line-shift spoofing (24), and combined multi-vector attacks (24). We evaluate five primary gate architectures and four controlled ablations across \TotalSealedRuns{} SHA-256-sealed suites totaling \TotalPREvals{} PR evaluations (25 paired seeds at 15-file budget, $65\%$ baseline unfenced injection susceptibility). Disjoint 20-seed A/A calibration confirms \AANoiseASRPP{}~pp ASR noise and \AANoiseRecPP{}~pp recall noise.
+
+\input{generated/tables/main_benchmark.tex}
+
+\subsection{RQ1: Adversarial Evasion Resilience}
+Table~\ref{tab:hpg_main} reports primary security metrics across all 180 cases:
+\begin{itemize}
+    \item \textbf{Adversarial Evasion (ASR)}: \texttt{NaiveDiffGate} suffers \NaiveASRPct{}\% hostile evasion, regex-based \texttt{PromptSanitizedGate} suffers \SanitizedASRPct{}\%, and \texttt{BudgetCappedSilentGate} suffers \BudgetSilentASRPct{}\%. \textbf{ZeroTrustEnvelopeGate} slashes hostile ASR to \ZTASRPct{}\% (Holm-adjusted Wilcoxon $p\HolmPASRVsNaive{}$ vs.\ naive, $p\HolmPASRVsBudget{}$ vs.\ budget-silent), while preserving \ZTRecallPct{}\% vulnerability recall, \ZTBenignFPPct{}\% benign false positives, and \ZTCostUSD{}~USD/PR mean cost.
+    \item \textbf{Zero Silent Bypass \& Zero Output Leaks}: Silent-fail baselines allow \NaiveSilentPct{}\%--\BudgetSilentBypassPct{}\% of hostile PRs to pass silently on budget truncation and leak \NaiveLeakPct{}\% of smuggled payloads. ZeroTrustEnvelopeGate guarantees \ZTSilentPct{}\% silent bypass (explicitly flagging \ZTExitThreePct{}\% truncated PRs with \texttt{Exit 3}) and \ZTLeakPct{}\% output leaks.
+    \item \textbf{Cross-Push Line-Shift Tracking}: Under Push~2 line shifts ($+15$ to $+60$ lines), line-number tracking collapses completely (\LineAnchorTrackFOne{} F1), whereas quote-anchored entity hashing achieves \ZTTrackFOne{} F1 ($p\HolmPTrackVsLine{}$).
+\end{itemize}
+
+\input{generated/tables/ablation.tex}
+
+\subsection{RQ2--RQ3: Ablation, Tight Budgets, and Injection Sensitivity}
+Table~\ref{tab:hpg_ablation} proves every deterministic contract is essential: removing Base-Commit Lock (\texttt{ZT-NoBaseLock}) spikes ASR from \ZTASRPct{}\% to \AblNoBaseASRPct{}\%; removing Fail-Closed \texttt{Exit 3} (\texttt{ZT-NoFailClosed}) spikes ASR to \AblNoFailASRPct{}\% and silent bypass to \AblNoFailSilentPct{}\%; removing Quote Anchoring (\texttt{ZT-NoQuoteAnchor}) collapses tracking F1 from \ZTTrackFOne{} to \AblNoQuoteTrackFOne{}; and removing SARIF fusion (\texttt{ZT-NoSARIF}) increases ASR to \AblNoSARIFASRPct{}\%.
+
+Table~\ref{tab:hpg_budget} sweeps per-PR budgets from 5 to 50 files (\texttt{exp3\_budget\_sweep\_v1}): even under an extreme 5-file budget, ZeroTrustEnvelopeGate maintains \BudFiveZTSilentPct{}\% silent bypass vs.\ \BudFiveBudgetSilentPct{}\% for \texttt{BudgetCappedSilentGate}. Under $85\%$ extreme prompt-injection susceptibility (\texttt{exp4\_injection\_sweep\_v1}), ZeroTrustEnvelopeGate holds ASR to \InjHighZTASRPct{}\% vs.\ \InjHighNaiveASRPct{}\% for \texttt{NaiveDiffGate}.
+
+\input{generated/tables/budget_sweep.tex}

@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Main Benchmark Across 180 HostilePR-Bench Cases (15-File Budget, 25 Paired Seeds; Mean [95\% Bootstrap CI]).}
+\label{tab:hpg_main}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Gate Architecture} & \textbf{Hostile ASR (\%)} $\downarrow$ & \textbf{Silent Bypass (\%)} $\downarrow$ & \textbf{Track F1} $\uparrow$ & \textbf{Recall (\%)} $\uparrow$ & \textbf{Leak (\%)} $\downarrow$ & \textbf{Exit 3 (\%)} \\
+\midrule
+NaiveDiffGate & 73.70 [72.70, 74.60] & 33.3 & 0.00 & 36.9 & 13.5 & 0.0 \\
+PromptSanitizedGate & 68.00 [67.03, 68.97] & 33.3 & 0.00 & 41.4 & 13.5 & 0.0 \\
+BudgetCappedSilentGate & 56.33 [55.23, 57.33] & 38.1 & 0.00 & 51.1 & 13.5 & 0.0 \\
+LineAnchoredIncrementalGate & 7.27 [6.40, 8.17] & 0.0 & 0.00 & 59.8 & 13.5 & 26.7 \\
+\textbf{ZeroTrustEnvelopeGate} & \textbf{2.03 [1.60, 2.47]} & \textbf{0.0} & \textbf{1.00} & \textbf{65.8} & \textbf{0.0} & \textbf{26.7} \\
+\bottomrule
+\end{tabular}
+\end{table*}

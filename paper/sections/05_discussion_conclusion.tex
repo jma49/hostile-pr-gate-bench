@@ -1,0 +1,6 @@
+\section{Threats to Validity and Conclusion}
+\label{sec:conclusion}
+
+\textbf{Threats to Validity.} While \textbf{HostilePR-Bench} parses real unified diffs, policy YAML/Markdown files, SARIF~2.1.0 alerts, and Push~2 line shifts, LLM semantic detection and injection susceptibility are modeled via calibrated stochastic draws rather than live paid API calls across frontier models. Sweeping injection susceptibility ($25\%$--$85\%$) and pairing 25 deterministic seeds mitigates model-specific bias; live multi-model API evaluation is planned for the camera-ready artifact.
+
+\textbf{Conclusion.} Autonomous PR quality gates operate in an adversarial threat environment where untrusted diffs can tamper with agent configs, inject prompts, starve review budgets, and spoof line-anchored state. Across \TotalPREvals{} sealed evaluations on the 180-case \textbf{HostilePR-Bench}, \textbf{ZeroTrustEnvelopeGate} reduces hostile evasion to \ZTASRPct{}\%, eliminates silent budget bypasses (\ZTSilentPct{}\%) and output leaks (\ZTLeakPct{}\%), and restores cross-push tracking F1 to \ZTTrackFOne{} through deterministic code contracts.

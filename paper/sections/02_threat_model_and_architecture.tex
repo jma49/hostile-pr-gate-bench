@@ -1,0 +1,15 @@
+\section{Threat Model and Zero-Trust Envelope}
+\label{sec:architecture}
+
+\subsection{Adversarial Threat Model}
+We consider an adversary with contributor or fork PR submission access to a repository protected by an autonomous AI review gate. The adversary can edit arbitrary source files, PR descriptions, and repository agent instruction files (\texttt{AGENTS.md}, \texttt{.gate-policy.yml}), prepend arbitrary decoy files to inflate diff size, and push follow-up commits. The adversary's objective is to land a vulnerable code change with an \texttt{Exit 0} green verdict or smuggle executable shell/exfiltration payloads into the review comment stream.
+
+\subsection{ZeroTrustEnvelopeGate Architecture}
+Rather than relying on brittle prompt engineering alone, \textbf{ZeroTrustEnvelopeGate} wraps non-deterministic LLM reasoning inside five deterministic code contracts:
+\begin{enumerate}
+    \item \textbf{Base-Commit Configuration Lock}: Policy rules, exclusion globs, and domain instructions are loaded strictly from the trusted mainline base commit; PR-head modifications to \texttt{AGENTS.md} or policy files are never executed as gate configuration.
+    \item \textbf{Fence Isolation \& Output Sanitization}: Untrusted diffs and PR bodies are encapsulated inside explicit nonce-delimited data fences, and generated review outputs are scrubbed of shell invocation blocks and untrusted external exfiltration links.
+    \item \textbf{SARIF~2.1.0 Evidence Fusion \& Risk Prioritization}: Static analyzer alerts (SARIF~2.1.0)~\cite{gnieciak2025large,qin2025advancing} are fused deterministically with risk-prioritized file ordering, ensuring security-critical files are inspected ahead of low-risk decoy changes and providing injection-immune corroboration.
+    \item \textbf{Fail-Closed Coverage Contract (\texttt{Exit 3})}: If per-PR file/cost budget is exhausted before all security-relevant files are inspected, the gate NEVER returns \texttt{Exit 0}; it emits an explicit \texttt{Exit 3} incomplete-coverage verdict listing every unreviewed path.
+    \item \textbf{Quote-Anchored Code-Entity Lifecycle}: Findings are keyed by a normalized code-quote entity hash rather than line numbers, preserving persistent defect tracking across Push~2 rebases and line shifts while still recognizing genuine fixes.
+\end{enumerate}

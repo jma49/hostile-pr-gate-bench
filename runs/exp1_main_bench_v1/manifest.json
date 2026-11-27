@@ -1,0 +1,51 @@
+{
+  "schema_version": "2.0",
+  "run_id": "exp1_main_bench_v1",
+  "experiment": "exp1_main_bench",
+  "timestamp_utc": "2026-11-27T02:08:13.380323+00:00",
+  "git_commit": "3b74492",
+  "harness_sha256": "f8bdf758b012d09a019faa2913b0de76d14a9a7626a15f0c67c7a589fc4b54ab",
+  "dataset_sha256": "2e558da2be55472dfe17043521a3fab24f4531e5bc394efc5000acfe2cc83d3c",
+  "command": "python3 eval/harness.py",
+  "seeds": [
+    5001,
+    5002,
+    5003,
+    5004,
+    5005,
+    5006,
+    5007,
+    5008,
+    5009,
+    5010,
+    5011,
+    5012,
+    5013,
+    5014,
+    5015,
+    5016,
+    5017,
+    5018,
+    5019,
+    5020,
+    5021,
+    5022,
+    5023,
+    5024,
+    5025
+  ],
+  "record_count": 125,
+  "metrics_file": "metrics.json",
+  "metrics_sha256": "8a2954929141c7a8ea92fe901c0d380714544f2f39baf79d8a914649ad2d47f2",
+  "artifact_sha256": "8a2954929141c7a8ea92fe901c0d380714544f2f39baf79d8a914649ad2d47f2",
+  "meta": {
+    "gates": [
+      "NaiveDiffGate",
+      "PromptSanitizedGate",
+      "BudgetCappedSilentGate",
+      "LineAnchoredIncrementalGate",
+      "ZeroTrustEnvelopeGate"
+    ],
+    "cases": 180
+  }
+}

@@ -1,0 +1,13 @@
+\section{Introduction}
+\label{sec:intro}
+
+Autonomous LLM code review agents are rapidly entering production CI/CD pipelines to inspect pull requests (PRs) for functional bugs and security vulnerabilities~\cite{schfer2023empirical,sghaier2025harnessing}. However, open-source software supply chains face persistent attacks delivered directly through pull requests and automated workflows~\cite{ladisa2023taxonomy,pan2023ambush,rebatchi2024dependabot}. When an AI quality gate is deployed in CI, \emph{the code change under review is an untrusted, potentially hostile input}.
+
+Existing AI review gates violate basic zero-trust security principles~\cite{deng2025agents}. First, many agents load repository instructions (e.g., \texttt{AGENTS.md} or review exclusion rules) from the PR head tree, allowing an attacker to disable security checks in the same PR that introduces a vulnerability. Second, raw unified diffs carry untrusted comments and docstrings that enable indirect prompt injection~\cite{zhan2024injecagent,zhan2025adaptive,alnemari2026genshield} and output command/exfiltration smuggling. Third, under realistic CI cost and token caps~\cite{cho2026finops,elfakdi2021evaluating}, padding a PR with dozens of benign decoy files starves the review budget, causing silent-fail gates to emit an \texttt{Exit 0} false green on unreviewed vulnerable files. Fourth, incremental PR trackers anchored on raw line numbers~\cite{tuna2022tracking,hasan2024refactoring} are trivially spoofed by inserting blank or comment lines above an unfixed defect on Push~2.
+
+We address these gaps with three contributions:
+\begin{enumerate}
+    \item \textbf{Hostile-PR Threat Model}: A formal threat model covering in-band config tampering, indirect prompt injection, budget-exhaustion starvation, output smuggling, and cross-push line-shift spoofing.
+    \item \textbf{HostilePR-Bench (180 Executable Cases)}: An open-source corpus of 180 concrete multi-file PR diffs spanning five vulnerability classes (SQL injection, command injection, auth bypass, SSRF, path traversal), SARIF~2.1.0 static alerts, and Push~1 $\to$ Push~2 histories across benign, vanilla, and six adversarial attack families.
+    \item \textbf{ZeroTrustEnvelopeGate}: A deterministic security envelope enforcing base-commit config locking, strict input fencing and output sanitization, SARIF neuro-symbolic corroboration~\cite{gnieciak2025large,qin2025advancing}, fail-closed incomplete coverage (\texttt{Exit 3}), and quote-anchored code-entity hashing.
+\end{enumerate}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "2.0",
+  "run_id": "exp3_budget_sweep_v1",
+  "experiment": "exp3_budget_sweep",
+  "timestamp_utc": "2026-11-27T02:08:47.964545+00:00",
+  "git_commit": "3b74492",
+  "harness_sha256": "f8bdf758b012d09a019faa2913b0de76d14a9a7626a15f0c67c7a589fc4b54ab",
+  "dataset_sha256": "2e558da2be55472dfe17043521a3fab24f4531e5bc394efc5000acfe2cc83d3c",
+  "command": "python3 eval/harness.py",
+  "seeds": [
+    5001,
+    5002,
+    5003,
+    5004,
+    5005,
+    5006,
+    5007,
+    5008,
+    5009,
+    5010,
+    5011,
+    5012,
+    5013,
+    5014,
+    5015,
+    5016,
+    5017,
+    5018,
+    5019,
+    5020
+  ],
+  "record_count": 400,
+  "metrics_file": "metrics.json",
+  "metrics_sha256": "2f5aedc0e629d389841db69819d677c5965fba5bd905c45b160f1e7d0c410490",
+  "artifact_sha256": "2f5aedc0e629d389841db69819d677c5965fba5bd905c45b160f1e7d0c410490",
+  "meta": {
+    "budgets": [
+      5,
+      10,
+      15,
+      30,
+      50
+    ]
+  }
+}
